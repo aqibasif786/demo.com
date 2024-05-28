@@ -1,0 +1,361 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Set body background color to white */
+    color: black; /* Set body text color to black */
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #1a1a1a; /* Set header background color same as footer */
+    color: #fff; /* Set header text color to white */
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff; /* Set header navigation text color to white */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content {
+    padding-top: 6rem;
+}
+
+section {
+    padding: 2rem 1rem;
+    background-color: white; /* Set section background color to white */
+    color: black; /* Set section text color to black */
+}
+
+.card {
+    background-color: white;
+    color: black;
+    margin: 1rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: center;
+}
+
+.slider-container, .product-slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slider, .product-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide, .product {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img, .product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next, .prev-product, .next-product {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev-product {
+    left: 0;
+}
+
+.next-product {
+    right: 0;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product {
+    text-align: center;
+}
+
+.product img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.footer {
+    background-color: #1a1a1a; /* Footer background color */
+    color: #f1f1f1; /* Footer text color */
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.footer-links, .footer-contact, .footer-social {
+    flex: 1;
+    margin: 1rem;
+}
+
+.footer-links h3, .footer-contact h3, .footer-social h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #f1f1f1;
+    display: inline-block;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-links ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #00bfa5;
+}
+
+.footer-contact p {
+    margin: 0.5rem 0;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.footer-social .social-icons a {
+    color: #f1f1f1;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+    color: #00bfa5;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Additional styles for the contact section */
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: white; /* Set contact section background to white */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: black; /* Set contact section text color to black */
+}
+
+.contact-form, .company-info {
+    flex: 1;
+    margin: 1rem;
+}
+
+.contact-form h2, .company-info h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+button[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.explore-more {
+    display: block;
+    margin: 20px auto; /* Set margin to center vertically and horizontally */
+    padding: 10px 20px;
+    background-color: #28a745; /* Change to green color */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Darker green color on hover */
+.explore-more:hover {
+    background-color: #218838;
+}
+
+.company-info p {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+/* Specific styling for the about page header */
+
+.about-header {
+    background-image: url('path-to-your-large-image.jpg'); /* Add the path to your image here */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Ensure text is white for contrast */
+    text-align: center;
+    padding: 5rem 1rem; /* Adjust padding as needed */
+    position: relative;
+}
+
+.about-header h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow for better readability */
+}
+
+.about-header p {
+    font-size: 1.5rem;
+    margin: 1rem 0 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow for better readability */
+}
+
+.about-content {
+    padding: 3rem 1rem;
+    background-color: white; /* Set about section background color to white */
+    color: black; /* Set about section text color to black */
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about-content p {
+    margin: 1rem 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Company information section */
+.company-info {
+    background-color: #f9f9f9;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.company-info h3 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.company-info p {
+    margin: 0.5rem 0;
+    color: #555;
+    line-height:
